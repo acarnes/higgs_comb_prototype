@@ -49,7 +49,7 @@ def main():
     # create binned dataset from histograms.
     # each histogram in hmap is associated with a diphoton
     # category.
-    data = RooDataHist('data', 'data', RooArgList(obs), h)
+    data = RooDataHist('data_obs', 'data_obs', RooArgList(obs), h)
     
     # add data to workspace.
     # the RooCmdArg() is a workaround a PyROOT "feature"
