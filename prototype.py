@@ -4,12 +4,12 @@
 #------------------------------------------------------------------
 import os,sys
 from time import sleep
-from histutil import *
+#from histutil import *
 from ROOT import *
 #------------------------------------------------------------------
 def main():
     # set up standard graphics style (see python/histutil.py)
-    setStyle()
+    #setStyle()
     gStyle.SetTitleYOffset(1.75)
     
     #----------------------------------------
@@ -72,10 +72,11 @@ def main():
     #----------------------------------------
     # create signal model
     #----------------------------------------
-    wspace.factory('smodel_norm[100, 0.0, 1000.0]')
+    wspace.factory('smodel_norm[1.0, 0.001, 1000.0]')
     wspace.factory('mass[125, %f, %f]' % (massmin, massmax))
     wspace.factory('w[1.0, 0.1, 10]')
     wspace.factory('Gaussian::smodel(x, mass, w)')
+    wspace.var('smodel_norm').setConstant()
     wspace.var('mass').setConstant()
 
     #----------------------------------------
@@ -83,7 +84,7 @@ def main():
     # with higgs combine
     #----------------------------------------
     wspace.SaveAs("p.root")
-
+"""
     #----------------------------------------
     # create background + signal model
     # use this to fit the pseudodata and make a picture
@@ -151,7 +152,7 @@ def main():
     c1.SaveAs('.png')
     
     sleep(5)
-
+"""
 #    #-----------------------------------------------------
 #    # Define a few useful sets.
 #    #-----------------------------------------------------
