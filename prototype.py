@@ -4,12 +4,12 @@
 #------------------------------------------------------------------
 import os,sys
 from time import sleep
-from histutil import *
+#from histutil import *
 from ROOT import *
 #------------------------------------------------------------------
 def main():
     # set up standard graphics style (see python/histutil.py)
-    setStyle()
+    #setStyle()
     gStyle.SetTitleYOffset(1.75)
     
     #----------------------------------------
