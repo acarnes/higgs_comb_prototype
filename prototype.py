@@ -59,7 +59,8 @@ def main():
     # create background model
     #----------------------------------------
     ndata = int(data.sumEntries());
-    wspace.factory('bmodel_norm[%d, 0.0, %d]' % (ndata, 3.0*ndata))
+    #wspace.factory('bmodel_norm[1.0, 0.1, 10]')
+    #wspace.var('bmodel_norm').setConstant()
     wspace.factory('a1[ 5.0, -50, 50]')
     wspace.factory('a2[-1.0, -50, 50]')
 
@@ -72,11 +73,11 @@ def main():
     #----------------------------------------
     # create signal model
     #----------------------------------------
-    wspace.factory('smodel_norm[1.0, 0.001, 1000.0]')
+    #wspace.factory('smodel_norm[1.0, 0.001, 1000.0]')
+    #wspace.var('smodel_norm').setConstant()
     wspace.factory('mass[125, %f, %f]' % (massmin, massmax))
     wspace.factory('w[1.0, 0.1, 10]')
     wspace.factory('Gaussian::smodel(x, mass, w)')
-    wspace.var('smodel_norm').setConstant()
     wspace.var('mass').setConstant()
 
     #----------------------------------------

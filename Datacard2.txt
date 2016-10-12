@@ -1,0 +1,17 @@
+# try 2 to base of ZPrime
+imax	*	num of channels
+jmax	*	num of backgrounds
+kmax	*	num of nuisance params
+---------------------
+bin mm
+observation	-1
+---------------------
+shapes * mm test.root $PROCESS
+---------------------
+bin	mm 		mm 		mm 		mm
+process sigVBF		sigGGF		bkgTTJ		bkgDYJ
+process	-1		0		1		2
+rate	14.4368116235 	159.162862968 	38322.4405365 	333493.40451
+---------------------
+
+

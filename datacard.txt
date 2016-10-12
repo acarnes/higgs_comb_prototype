@@ -1,12 +1,8 @@
-imax 1 
-jmax 1 
-kmax 4 
+imax * 
+jmax * 
+kmax * 
 ----------------------------------------------------------------------------------------------------------------------------------
 shapes * *  p.root hmumu:$PROCESS
-
-#shapes signal    cat0      p.root hmumu:smodel
-#shapes bkg       cat0      p.root hmumu:bmodel
-#shapes data      cat0      p.root hmumu:data
 ----------------------------------------------------------------------------------------------------------------------------------
 bin          cat0             
 observation  -1.0             
@@ -16,8 +12,8 @@ process                                  smodel       bmodel
 process                                  0            1         
 rate                                     173.6        371815.0         
 ----------------------------------------------------------------------------------------------------------------------------------
-mass    param    0.0    0.001
-w       param    0.0    0.001
-a1      param    0.0    0.001
-a2      param    0.0    0.001
+mass    param    0.0    0.1
+w       param    0.0    0.1
+a1      param    0.0    0.1
+a2      param    0.0    0.1
 
